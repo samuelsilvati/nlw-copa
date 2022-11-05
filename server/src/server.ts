@@ -20,7 +20,7 @@ async function bootstrap() {
 
   // .env
   await fastify.register(jwt, {
-    secret: 'nlwcopa'
+    secret: `${process.env.API_SECRET}`,
   })
 
   await fastify.register(poolRoutes)
